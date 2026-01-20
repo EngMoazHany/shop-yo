@@ -1,0 +1,53 @@
+.checkout-page {
+  min-height: 100vh;
+  padding: 160px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checkout-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+/* Box */
+.checkout-box {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 30px;
+  padding: 50px;
+}
+
+/* Text */
+.checkout-text {
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Summary */
+.checkout-summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* Button */
+.checkout-btn {
+  width: 100%;
+  padding: 18px 0;
+  border-radius: 50px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: #ddd;
+}
