@@ -112,7 +112,7 @@ SEO optimization
 
 Custom domain & analytics
 
-👤 Author
+##👤 Author
 Moaz Hany
 Frontend Developer
 Luxury UI & React Enthusiast
