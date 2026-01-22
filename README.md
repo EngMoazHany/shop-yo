@@ -66,36 +66,6 @@ Every product is presented with clarity, detail, and a strong visual identity.
 
 ---
 
-## 📂 Project Structure
-
-src/
-│
-├── components/
-│ ├── Navbar.jsx
-│ ├── Footer.jsx
-│ ├── ProductCard.jsx
-│
-├── pages/
-│ ├── Home.jsx
-│ ├── Products.jsx
-│ ├── ProductDetails.jsx
-│ ├── Cart.jsx
-│ ├── Checkout.jsx
-│ └── RootLayout.jsx
-│
-├── store/
-│ └── cart-context.jsx
-│
-├── data/
-│ └── products.js
-│
-├── assets/
-│ └── logo.png
-│
-└── index.css
-
-
----
 
 ## 🧪 Example WhatsApp Order Message
 
@@ -147,8 +117,7 @@ Moaz Hany
 Frontend Developer
 Luxury UI & React Enthusiast
 
-© 2026 R&Y SHOP MIRROR
-All rights reserved.
+
 
 
 
