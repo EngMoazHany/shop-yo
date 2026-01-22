@@ -111,3 +111,69 @@
     font-size: 32px;
   }
 }
+.details-brand {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.details-meta {
+  margin: 20px 0;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.color-section {
+  margin: 30px 0;
+}
+
+.color-section span {
+  display: block;
+  margin-bottom: 10px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.colors {
+  display: flex;
+  gap: 12px;
+}
+
+.color-dot {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.color-dot.active,
+.color-dot:hover {
+  background: white;
+  color: black;
+}
+
+.price-box {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.old-price {
+  color: #777;
+  text-decoration: line-through;
+}
+
+.discount {
+  color: #ff5252;
+  font-weight: 700;
+}
+
+.new-price {
+  font-size: 28px;
+  font-weight: 800;
+}

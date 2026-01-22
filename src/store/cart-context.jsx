@@ -34,58 +34,92 @@ export function CartProvider({ children }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  /* Add item */
+  /* =======================
+     Add item (id + color)
+  ======================= */
   const addToCart = (product) => {
     setCart((prev) => {
-      const exist = prev.find((item) => item.id === product.id);
+      const exist = prev.find(
+        (item) =>
+          item.id === product.id &&
+          item.selectedColor === product.selectedColor
+      );
 
       if (exist) {
         return prev.map((item) =>
-          item.id === product.id
+          item.id === product.id &&
+          item.selectedColor === product.selectedColor
             ? { ...item, qty: item.qty + 1 }
             : item
         );
       }
 
-      return [...prev, { ...product, qty: 1 }];
+      return [
+        ...prev,
+        {
+          ...product,
+          qty: 1,
+        },
+      ];
     });
   };
 
-  /* Decrease quantity */
-  const decreaseQty = (id) => {
+  /* =======================
+     Decrease quantity
+  ======================= */
+  const decreaseQty = (id, color) => {
     setCart((prev) =>
       prev
         .map((item) =>
-          item.id === id ? { ...item, qty: item.qty - 1 } : item
+          item.id === id && item.selectedColor === color
+            ? { ...item, qty: item.qty - 1 }
+            : item
         )
         .filter((item) => item.qty > 0)
     );
   };
 
-  /* Remove item */
-  const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+  /* =======================
+     Remove item
+  ======================= */
+  const removeFromCart = (id, color) => {
+    setCart((prev) =>
+      prev.filter(
+        (item) =>
+          !(item.id === id && item.selectedColor === color)
+      )
+    );
   };
 
-  /* Clear cart */
+  /* =======================
+     Clear cart
+  ======================= */
   const clearCart = () => {
     setCart([]);
   };
 
-  /* Cart count */
+  /* =======================
+     Cart count
+  ======================= */
   const cartCount = useMemo(() => {
     return cart.reduce((sum, item) => sum + item.qty, 0);
   }, [cart]);
 
-  /* Total price */
+  /* =======================
+     Total price
+     (discountPrice لو موجود)
+  ======================= */
   const total = useMemo(() => {
-    return cart.reduce(
-      (sum, item) => sum + item.price * item.qty,
-      0
-    );
+    return cart.reduce((sum, item) => {
+      const price =
+        item.discountPrice ?? item.price;
+      return sum + price * item.qty;
+    }, 0);
   }, [cart]);
 
-  /* Context value */
+  /* =======================
+     Context value
+  ======================= */
   const value = {
     cart,
     cartCount,
@@ -110,7 +144,9 @@ export function useCart() {
   const context = useContext(CartContext);
 
   if (!context) {
-    throw new Error("useCart must be used within CartProvider");
+    throw new Error(
+      "useCart must be used within CartProvider"
+    );
   }
 
   return context;

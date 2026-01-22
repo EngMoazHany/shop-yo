@@ -14,25 +14,39 @@ export default function Checkout() {
     }
   }, [cart, navigate]);
 
-  const phone = "201557992912"; // رقمك ✅
+  const phone = "+201095170771"; // رقمك ✅
 
+  /* =======================
+     WhatsApp Message
+  ======================= */
   const message = `
-🛒 New Order - VOID
+🛍️ *NEW ORDER – R&Y SHOP*
+——————————————
 
 ${cart
   .map(
-    (item) =>
-      `• ${item.name} x${item.qty} = ${item.price * item.qty} EGP`
+    (item, index) => `
+${index + 1}) ${item.brand || "VOID"}
+${item.name}
+
+• Code: ${item.code || "-"}
+• Color: ${item.selectedColor || "N/A"}
+• Quantity: ${item.qty}
+• Price: ${item.price} EGP
+• Subtotal: ${item.price * item.qty} EGP
+`
   )
-  .join("\n")}
+  .join("\n——————————————\n")}
 
-------------------------
-Total: ${total} EGP
+========================
+💰 *TOTAL: ${total} EGP*
+========================
 
-📍 Name:
-📍 Address:
-📍 Phone:
-📍 Notes:
+📍 *Customer Details*
+Name:
+Phone:
+Address:
+Notes:
 `;
 
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
@@ -52,7 +66,7 @@ Total: ${total} EGP
       <div className="checkout-box">
         <p className="checkout-text">
           Your order will be sent via WhatsApp with all product details.
-          Please complete your information in the message.
+          Please complete your information in the message before sending.
         </p>
 
         <div className="checkout-summary">
@@ -64,7 +78,7 @@ Total: ${total} EGP
           className="checkout-btn btn"
           onClick={handleCheckout}
         >
-          Send Order via WhatsApp
+          Send Order via WhatsApp →
         </button>
       </div>
     </div>

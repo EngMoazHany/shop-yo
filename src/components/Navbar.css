@@ -1,57 +1,92 @@
+/* ===== Navbar Base ===== */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 100;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: white;
-  text-decoration: none;
+/* ===== Logo ===== */
+.logo img {
+  height: 30px;
+  display: block;
 }
 
+/* ===== Links ===== */
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 36px;
 }
 
 .nav-links a {
   color: #aaa;
   text-decoration: none;
   font-size: 14px;
-  letter-spacing: 1px;
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #fff;
 }
 
-.cta {
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 10px 20px;
+/* ===== Actions ===== */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cta,
+.cart-btn {
+  padding: 10px 22px;
   border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
   text-decoration: none;
-  color: white;
   font-size: 12px;
+  letter-spacing: 0.5px;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
-.cta:hover {
-  background: white;
-  color: black;
+.cta:hover,
+.cart-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 14px 20px;
+  }
+
+  .nav-links {
+    display: none; /* نخفي اللينكات فقط */
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .cta,
+  .cart-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .logo img {
+    height: 26px;
+  }
 }

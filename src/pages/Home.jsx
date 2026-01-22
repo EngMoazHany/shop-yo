@@ -5,20 +5,22 @@ export default function Home() {
     <div className="page">
       <section className="hero">
         <div className="hero-content">
-          <span className="tag">NEW COLLECTION</span>
+          <span className="tag">WELCOME TO R&Y SHOP MIRROR</span>
 
           <h1>
-            Wear Your <br />
-            <span>Identity</span>
+            Timeless Luxury <br />
+            <span>Designed to Be Carried</span>
           </h1>
 
           <p>
-            Premium streetwear crafted with purpose.
-            Designed to be more than just clothing.
+            R&Y SHOP MIRROR is a curated destination for premium designer bags,
+            crafted with exceptional attention to detail, quality, and elegance.
+            Each piece reflects a commitment to sophistication, authenticity,
+            and refined taste.
           </p>
 
           <a href="/products" className="hero-btn btn">
-            Explore Products
+            Explore The Collection
           </a>
         </div>
       </section>

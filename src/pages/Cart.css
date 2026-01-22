@@ -170,3 +170,49 @@
     gap: 30px;
   }
 }
+.cart-empty {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.empty-box {
+  text-align: center;
+  max-width: 420px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.cart-empty h1 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.cart-empty p {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Button */
+.empty-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.empty-btn:hover {
+  background: white;
+  color: black;
+}

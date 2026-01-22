@@ -7,7 +7,9 @@ import "./ProductDetails.css";
 export default function ProductDetails() {
   const { id } = useParams();
   const { addToCart } = useCart();
+
   const [loading, setLoading] = useState(true);
+  const [selectedColor, setSelectedColor] = useState(null);
 
   const product = products.find((p) => p.id === id);
 
@@ -16,7 +18,6 @@ export default function ProductDetails() {
     return () => clearTimeout(timer);
   }, []);
 
-  /* Skeleton */
   if (loading) {
     return (
       <div className="page product-details-page">
@@ -40,39 +41,105 @@ export default function ProductDetails() {
     );
   }
 
+  /* السعر النهائي */
+  const finalPrice =
+    product.discountPrice && product.discount > 0
+      ? product.discountPrice
+      : product.price;
+
+  /* الصورة الحالية */
+  const currentImage =
+    product.images && selectedColor
+      ? product.images[selectedColor]
+      : product.images
+      ? product.images[product.colors[0]]
+      : product.image;
+
   return (
     <div className="page product-details-page">
-      
       {/* Image */}
       <div className="details-image">
-        <img src={product.image} alt={product.name} />
+        <img src={currentImage} alt={product.name} />
       </div>
 
       {/* Info */}
       <div className="details-info">
-        <span className="details-category">
-          {product.category || "VOID COLLECTION"}
+        <span className="details-brand">
+          {product.brand || "VOID"}
         </span>
 
         <h1 className="details-title">{product.name}</h1>
 
-        <p className="details-description">
-          {product.description ||
-            "Premium streetwear piece crafted with attention to detail, identity, and timeless design."}
-        </p>
-
-        <div className="details-price">
-          {product.price} EGP
+        {/* Meta */}
+        <div className="details-meta">
+          {product.size && (
+            <div>
+              <strong>Size</strong> | {product.size}
+            </div>
+          )}
+          {product.code && (
+            <div>
+              <strong>Code</strong> | {product.code}
+            </div>
+          )}
+          {product.box && <div>BOX 📦</div>}
         </div>
 
+        {/* Colors */}
+        {product.colors && (
+          <div className="color-section">
+            <span>Color</span>
+            <div className="colors">
+              {product.colors.map((color) => (
+                <button
+                  key={color}
+                  className={`color-dot ${
+                    selectedColor === color ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedColor(color)}
+                >
+                  {color}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Price */}
+        <div className="price-box">
+          {product.discount > 0 && (
+            <>
+              <span className="old-price">
+                Price | {product.price} EGP ❌
+              </span>
+              <span className="discount">
+                🔥 DISCOUNT {product.discount}% 🔥
+              </span>
+            </>
+          )}
+          <span className="new-price">
+            Price | {finalPrice} EGP ✅
+          </span>
+        </div>
+
+        {/* Add to cart */}
         <button
           className="void-btn"
-          onClick={() => addToCart(product)}
+          disabled={product.colors && !selectedColor}
+          onClick={() =>
+            addToCart({
+              ...product,
+              selectedColor,
+              price: finalPrice,
+              image: currentImage,
+            })
+          }
         >
-          Add to Cart →
+          {product.colors && !selectedColor
+            ? "Select Color First"
+            : "Add to Cart →"}
         </button>
       </div>
-
     </div>
   );
 }

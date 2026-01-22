@@ -1,105 +1,89 @@
-const image =
-  "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=80";
-
 export const products = [
+  /* ================= 1) Air pods bag ================= */
   {
     id: "1",
-    name: "Black Essential Hoodie",
-    price: 450,
-    category: "Hoodies",
-    image,
-    description: "Premium black hoodie crafted for comfort and everyday wear.",
+    name: "Air pods bag",
+    brand: "Louis Vuitton",
+    price: 1500,           // السعر الأصلي
+    discountPrice: 1500,   // لا خصم
+    discount: 0,
+    category: "Accessories",
+    // حط صورة حقيقية هنا بدل الرابط التجريبي
+    image:
+      "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=80",
+    colors: ["Brown"],
+    size: null,
+    code: "950-2",
+    box: true,
+    description:
+      "Luxury AirPods bag crafted with premium materials and iconic Louis Vuitton style.",
   },
+
+  /* ================= 2) Gucci Ophidia small tote ================= */
   {
     id: "2",
-    name: "Oversized Grey Hoodie",
-    price: 480,
-    category: "Hoodies",
-    image,
-    description: "Oversized fit hoodie with a modern streetwear silhouette.",
+    name: "Ophidia Small Tote",
+    brand: "Gucci",
+    price: 2800,
+    discountPrice: 2800,
+    discount: 0,
+    category: "Bags",
+    image:
+      "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=80",
+    colors: ["Brown"],     // مذكور Brown في القائمة الأصلية
+    size: "22 x 18 cm",
+    code: "05789",
+    box: true,
+    description:
+      "Classic Gucci Ophidia tote with signature GG canvas and elegant finish.",
   },
+
+  /* ================= 3) Gucci Trimmed leather bucket ================= */
   {
     id: "3",
-    name: "Minimal Beige Hoodie",
-    price: 470,
-    category: "Hoodies",
-    image,
-    description: "Soft beige hoodie designed for a clean and minimal look.",
+    name: "Trimmed Leather Bucket",
+    brand: "Gucci",
+    price: 3000,
+    discountPrice: 1500,   // بعد الخصم
+    discount: 50,
+    category: "Bags",
+    image:
+      "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=80",
+    colors: ["Black", "White"], // الألوان المتاحة فقط أسود و أبيض
+    size: "23 x 20 cm",
+    code: "782908",
+    box: true,
+    description:
+      "Luxury trimmed leather bucket bag with minimalist silhouette and premium feel.",
   },
 
-  {
-    id: "4",
-    name: "White Essential T-Shirt",
-    price: 250,
-    category: "T-Shirts",
-    image,
-    description: "Premium cotton t-shirt with a timeless clean design.",
-  },
-  {
-    id: "5",
-    name: "Black Oversized Tee",
-    price: 280,
-    category: "T-Shirts",
-    image,
-    description: "Oversized black tee inspired by modern street culture.",
-  },
-  {
-    id: "6",
-    name: "Graphic Street Tee",
-    price: 300,
-    category: "T-Shirts",
-    image,
-    description: "Bold graphic t-shirt for a strong streetwear statement.",
+  /* ================= 4) Gucci GG Marmont Handle Bag ================= */
+{
+  id: "4",
+  name: "GG Marmont Handle Bag",
+  brand: "Gucci",
+  price: 4000,
+  discountPrice: 2000,
+  discount: 50,
+  category: "Bags",
+
+  images: {
+    White:
+      "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&q=80",
+    Black:
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    Beige:
+      "https://images.unsplash.com/photo-1618354691438-25bc04584c23?auto=format&fit=crop&w=800&q=80",
+    Gray:
+      "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=800&q=80",
   },
 
-  {
-    id: "7",
-    name: "Black Cargo Pants",
-    price: 520,
-    category: "Pants",
-    image,
-    description: "Utility-inspired cargo pants with a relaxed fit.",
-  },
-  {
-    id: "8",
-    name: "Grey Jogger Pants",
-    price: 480,
-    category: "Pants",
-    image,
-    description: "Comfortable joggers designed for everyday movement.",
-  },
+  colors: ["White", "Black", "Beige", "Gray"],
+  size: "34 x 17 cm",
+  code: "795218",
+  box: true,
+  description:
+    "Iconic GG Marmont handle bag with bold structure and timeless Gucci elegance.",
+}
 
-  {
-    id: "9",
-    name: "Black Puffer Jacket",
-    price: 750,
-    category: "Jackets",
-    image,
-    description: "Warm puffer jacket built for cold urban nights.",
-  },
-  {
-    id: "10",
-    name: "Minimal Denim Jacket",
-    price: 680,
-    category: "Jackets",
-    image,
-    description: "Classic denim jacket with a modern streetwear touch.",
-  },
-
-  {
-    id: "11",
-    name: "Black Cap",
-    price: 150,
-    category: "Accessories",
-    image,
-    description: "Minimal black cap for everyday street style.",
-  },
-  {
-    id: "12",
-    name: "Street Backpack",
-    price: 420,
-    category: "Accessories",
-    image,
-    description: "Durable backpack designed for daily urban use.",
-  },
 ];
