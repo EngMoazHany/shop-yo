@@ -111,12 +111,13 @@ Image gallery per color
 SEO optimization
 
 Custom domain & analytics
-
+```bash
+---
 ##👤 Author
 Moaz Hany
 Frontend Developer
 Luxury UI & React Enthusiast
-
+```bash
 
 
 
