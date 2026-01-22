@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
 import { CartProvider } from "../store/cart-context";
 
+
 export default function App() {
   return (
     <CartProvider>
