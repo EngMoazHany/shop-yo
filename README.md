@@ -88,36 +88,43 @@ Total: 2000 EGP
 
 ---
 
+---
+
 ## 🔧 Local Development
+
+To run the project locally, follow these steps:
 
 ```bash
 git clone https://github.com/EngMoazHany/shop-yo.git
 cd shop-yo
 npm install
 npm run dev
-📦 Deployment
-The project is automatically deployed on Netlify from the main branch.
+The application will be available at:
+👉 http://localhost:5173
 
-Live URL:
+📦 Deployment
+This project is automatically deployed using Netlify.
+Every push to the main branch triggers a new production build.
+
+🌐 Live Website
 👉 https://jo-store.netlify.app/
 
 ✨ Future Enhancements
-Admin dashboard
+🛠️ Admin dashboard
 
-Product filtering (Brand / Price / Color)
+🔍 Product filtering (Brand / Price / Color)
 
-Image gallery per color
+🖼️ Image gallery per color
 
-SEO optimization
+🔎 SEO optimization
 
-Custom domain & analytics
-```bash
----
-##👤 Author
+🌍 Custom domain & analytics
+
+👤 Author
 Moaz Hany
 Frontend Developer
 Luxury UI & React Enthusiast
-```bash
+
 
 
 
