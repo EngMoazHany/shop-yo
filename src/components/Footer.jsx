@@ -47,6 +47,20 @@ export default function Footer() {
         </div>
 
       </div>
+      <div className="footer-credit">
+  <p>
+    Designed & Developed by <strong>Moaz Hany</strong>
+  </p>
+  <span>
+     Software Engineer
+  </span>
+  <div className="credit-links">
+    <a href="tel:01557992912">📞 01557992912</a>
+    <a href="mailto:Moazhany27@gmail.com">✉️ Moazhany27@gmail.com</a>
+  </div>
+</div>
+
     </footer>
   );
+  
 }

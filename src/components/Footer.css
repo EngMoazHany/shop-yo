@@ -82,3 +82,40 @@
     margin: 10px auto 0;
   }
 }
+.footer-credit {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+.footer-credit p {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.footer-credit span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.credit-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.credit-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.credit-links a:hover {
+  color: white;
+}
