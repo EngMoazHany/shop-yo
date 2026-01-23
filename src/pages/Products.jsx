@@ -8,11 +8,15 @@ export default function Products() {
       
       {/* Header */}
       <div className="products-header">
-        <span className="products-tag">COLLECTION</span>
-        <h1>Products</h1>
+        <span className="products-tag">THE COLLECTION</span>
+
+        <h1>Curated Luxury</h1>
+
         <p>
-          Discover our premium streetwear pieces crafted with purpose,
-          identity, and timeless design.
+          Explore our carefully selected collection of premium designer bags,
+          where timeless elegance meets refined craftsmanship.
+          Each piece is chosen to reflect sophistication, authenticity,
+          and lasting value.
         </p>
       </div>
 
